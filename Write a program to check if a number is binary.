@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int num=10011000;
+    int count, temp, flag, i;
+    count=0;
+    temp=num;
+    while(temp!=0)
+    {
+        temp=temp/10;
+        count++;
+    }
+    temp=num;
+    while(count!=0)
+    {
+        temp=num%10;
+        if(temp!=0&& temp!=1){
+        flag=1;break;}
+        else {
+            flag=0;}
+        num=num/10;
+        count--;
+    }
+    if(flag==1)
+    printf("Not Binary");
+    else if(flag==0)
+    printf("Binary");
+}
