@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num, temp, digit, sum;
+    num=327;
+    sum=0;
+    temp=num;
+    int count;
+    while(num!=0)
+    {
+       sum=(sum*10)+(num%10);
+       num=num/10;
+    }
+    printf("%d",sum);
+}
