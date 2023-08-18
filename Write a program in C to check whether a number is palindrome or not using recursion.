@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int fun(int n, int num2){
+if(n==0)
+return num2;
+else 
+{
+    num2=num2*10+(n)%10;
+    n=n/10;
+    return fun(n, num2);
+}
+}
+int main()
+{
+    int num, temp, digit, sum;
+    num=3225223;
+    if(num==fun(num, 0)) printf("Palindrome!");
+    else printf("Not palindrome!");
+}
