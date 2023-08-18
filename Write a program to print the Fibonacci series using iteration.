@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int first, second, current;
+    first=0;
+    second =1;
+    current=0;
+    printf("%d %d ", first, second);
+    while(current<=100)
+    {
+        current=first+second;
+        first=second;
+        second=current;
+        printf("%d ", current);    
+    }
+}
