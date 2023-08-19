@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a, b, i;
+    a=5, b=8;
+    for(i=0; i<b;i++)
+    {
+        a++;
+    }
+    printf("%d", a);
+}
