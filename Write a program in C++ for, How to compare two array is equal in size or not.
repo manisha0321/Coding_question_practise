@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr1[] = {1, 2, 3, 4, 5};
+    int arr2[] = {2, 3, 1, 0, 5};
+    
+    int n1 = sizeof(arr1) / sizeof(arr1[0]);
+    int n2 = sizeof(arr2) / sizeof(arr2[0]);
+    
+    if (n1 == n2) {
+        cout << "The two arrays are of equal size." << endl;
+    } else {
+        cout << "The two arrays are NOT of equal size." << endl;
+    }
+    
+    return 0;
+}
