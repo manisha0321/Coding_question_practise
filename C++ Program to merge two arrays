@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int arr1[] = {10, 5, 20, 8};
+    int n1 = sizeof(arr1) / sizeof(arr1[0]);
+    int arr2[] = {1, 2, 3, 4};
+    int n2 = sizeof(arr2) / sizeof(arr2[0]);
+    int arr3[50];
+    int i,m,j;
+    m=n1+n2;
+    for(i=0,j=0;i<n1;j++,i++)
+    {
+        arr3[i]=arr1[j];
+    }
+    for(i=n1,j=0;i<m;j++,i++)
+    {
+        arr3[i]=arr2[j];
+    }
+    cout << "The updated array is: " << endl;
+    for(i=0;i<m;i++)
+    cout<<arr3[i]<<" ";
+
+    return 0;
+}
