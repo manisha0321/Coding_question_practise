@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+int findMinIndex(int arr[], int start, int n) {
+    int minIndex = start;
+    for (int i = start + 1; i < n; i++) {
+        if (arr[i] < arr[minIndex]) {
+            minIndex = i;
+        }
+    }
+    return minIndex;
+}
+int main()
+{
+    int n;
+    cout<<"Enter the total number of didgits present here:"<<endl;
+    cin>>n;
+    int arr[n];
+    int i,j;
+    cout<<"Enter the numbers in array"<<endl;
+    for(i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    for(i=0;i<n-1;i++)
+    {
+        int minIndex = findMinIndex(arr, i, n);
+        swap(arr[i], arr[minIndex]);
+    }
+    cout<<"Sorted Array:";
+    for(i=0;i<n;i++)
+    {
+        cout<<arr[i];
+    }
+}
